@@ -4,38 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css"/>
     <title>Document</title>
 </head>
 <body>
 
     <header>
-        <h1>Tech Challenge</h1>
+        <div class="wrapper">
+            <h1>Tech Challenge</h1>
+        </div>
     </header>
 
     <section>
-        <form action="">
-            <fieldset>
-                <label class="sr-only" for="name">Enter your name</label>
-                <input type="text" name="name" id="name" placeholder="Name">
-                <label class="sr-only" for="item">Enter your item</label>
-                <input type="item" name="item" id="item" placeholder="item">
-                <label class="sr-only" for="email">Enter your email</label>
-                <input type="text" name="email" id="email" placeholder="email">
-            </fieldset>
-        </form>
+        <div class="wrapper">
+            <form action="">
+                <fieldset>
+                    <label class="sr-only" for="name">Enter your name</label>
+                    <input class = "userName" type="text" name="name" id="name" placeholder="Name">
+                    <label class="sr-only" for="item">Enter your item</label>
+                    <input class="userItem" type="item" name="item" id="item" placeholder="item">
+                    <label for="group-one">1</label>
+                    <input class="group-one" type="radio" name="group" id="one" value="one">
+                    <label for="group-two">2</label>
+                    <input type="radio" name="group" id="two" value="two">
+                    <label for="group-three">3</label>
+                    <input type="radio" name="group" id="three" value="three">
+                    <input type="submit" class="submit" value="Submit!" id="submit-button">
+                </fieldset>
+            </form>
+        </div>
     </section>
 
     <section>
-        <div class="bucket">
-            <h2>Name</h2>
-        </div>
-        <div class="bucket">
-            <h2>item</h2>
-        </div>
-        <div class="bucket">
-            <h2>email</h2>
+        <div class="wrapper buckets">
+            <div class="bucket-1">
+                <h2>Group 1</h2>
+            </div>
+            <div class="bucket-2">
+                <h2>Group 2</h2>
+            </div>
+            <div class="bucket-3">
+                <h2>Group 3</h2>
+            </div>
         </div>
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="scripts/scripts.js"></script>
     
 </body>
 </html>

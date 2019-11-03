@@ -1,0 +1,14 @@
+@import "setup";
+@import "general";
+
+
+header {
+    background: rebeccapurple;
+}
+
+.buckets {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5rem;
+
+}
