@@ -52,32 +52,46 @@ let array = [{
 
     }
 
-    // let groupOne = 1;
-    // let groupTwo = 2;
-    // let groupThree = 3;
-
-
-    
     bucketList.loadInput = function () {
         $("form").on("submit", function (event) {
             event.preventDefault();
-            const userName = $(`input[name=name]:checked`).val();
-            const userItem = $(`input[name=item]:checked`).val();
+            const userName = $(`input[name=name]`).val();
+            const userItem = $(`input[name=item]`).val();
             const userGroup = $(`input[name=group]:checked`).val();
             
             if (userGroup === "one") {
                 $(".bucket-1").append(`<p>${userName} is bringing a ${userItem}</p>`);
             } else if (userGroup === "two") {
                 $(".bucket-2").append(`<p>${userName} is bringing a ${userItem}</p>`);
-            } else {
+            } else if (userGroup === "three"){
                 $(".bucket-3").append(`<p>${userName} is bringing a ${userItem}</p>`);
+            } else {
+
+                alert('Error. select 1, 2, or 3');
             }
-            console.log(userName)
+
+            // for (let i = 0; i < array.length; i++) {
+
+            //     if (userItem === array[i])  {
+            //         alert('someone is already bringing this item.  pick something else, or choose another group');
+            //     }
+    
+            // }
+
+ 
         })
 
        
 
     }
+
+    // bucketList.checker = function () {
+    //     if (userItem === array[i].item)  {
+    //         alert('someone is already bringing this item');
+    //     }
+    // }
+
+
 
 
     $(function(){
